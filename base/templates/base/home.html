@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Training School</title>
+    <!-- html to css *****-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <!-- Icons*****-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap css*****-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+            crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Google fonts *****-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@700&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type = "image/x-icon">
+</head>
+<!-- ***************************************************************************************************************-->
+<!-- ***************************************************************************************************************-->
+                                                     <!-- Navbar -->
+<!--*****************************************************************************************************************-->
+ <body data-spy="scroll" data-target="navbarResponsive">
+
+  <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+        <div class="container"> <!-- Margin-->
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="#" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <!-- Avatar -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                               id="navbarDropdownMenuLink2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+                                     class="rounded-circle" height="22" alt="Portrait of a Woman" loading="lazy"/>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#home">Icon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Company">Os nossos Cursos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Prices">Campos Virtual</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                           role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">New Message</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- Main -->
+  <section id="main">
+        <!--Main Navigation-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://images.squarespace-cdn.com/content/v1/5475f6eae4b0821160f6ac3e/1495528961499-EXI3Y6UVI9LJPA0HH7OV/image-asset.jpeg?format=1000w" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="texteffect">
+                <h1>
+                    <span>Os</span> <span>nossos</span> <span>formadores</span> <span>são</span> <span>especialistas</span>
+                    <span>em</span> <span>formação</span> <span>nas</span> <span>areas</span> <span>disponiveis</span>
+                    <span>neste</span> <span>portal</span> <span>interativo</span> <span>no</span> <span>fim</span>
+                    <span>de</span> <span>cada</span> <span>curso</span> <span>é</span> <span>entregue</span>
+                    <span>um</span> <span>diploma</span> <span>e</span> <span>um</span> <span>certificado</span>
+                </h1>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://lecolefrancaise.fr/wp-content/uploads/2020/03/reconversion-professionnelle-informatique.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.reconversionprofessionnelle.org/wp-content/uploads/2022/02/formation-en-informatique-1280x720.png" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+      <div class="containerb">
+          <div class="cardb">
+              <h3 class="titleb">Card 1</h3>
+              <div class="barb">
+                  <div class="emptybarb"></div>
+                  <div class="filledbarb"></div>
+              </div>
+              <div class="circleb">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="stroke" cx="60" cy="60" r="50"/>
+                  </svg>
+              </div>
+          </div>
+          <div class="cardb">
+              <h3 class="titleb">Card 2</h3>
+              <div class="barb">
+                  <div class="emptybarb"></div>
+                  <div class="filledbarb"></div>
+              </div>
+              <div class="circleb">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="stroke" cx="60" cy="60" r="50"/>
+                  </svg>
+              </div>
+          </div>
+          <div class="cardb">
+              <h3 class="titleb">Card 3</h3>
+              <div class="barb">
+                  <div class="emptybarb"></div>
+                  <div class="filledbarb"></div>
+              </div>
+              <div class="circleb">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="stroke" cx="60" cy="60" r="50"/>
+                  </svg>
+              </div>
+          </div>
+          <div class="cardb">
+              <h3 class="titleb">Programação</h3>
+              <img class="cardimg" src="https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces,q_auto/https://www.gcu.edu/sites/default/files/2020-09/programming.jpg">
+              <div class="barb">
+                  <div class="emptybarb"></div>
+                  <div class="filledbarb"></div>
+              </div>
+              <div class="circleb">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="stroke" cx="60" cy="60" r="50"/>
+                  </svg>
+              </div>
+          </div>
+          <div class="cardb">
+              <h3 class="titleb">Card 5</h3>
+              <div class="barb">
+                  <div class="emptybarb"></div>
+                  <div class="filledbarb"></div>
+              </div>
+              <div class="circleb">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="stroke" cx="60" cy="60" r="50"/>
+                  </svg>
+              </div>
+          </div>
+      </div>
+                                               <!--Main Navigation-->
+  </section>
+
+                                         <!-- Contact Client -->
+                               <!--   ******************************  -->
+    <section id="contact">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">CONTACT</h6>
+                    <h1>Contact me</h1>
+                </div>
+            </div>
+
+            <form action="" class="row g-3 justify-content-center">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Enter E-mail">
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" placeholder="Enter Subject">
+                </div>
+                <div class="col-md-10">
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"
+                        placeholder="Enter Message"></textarea>
+                </div>
+                <div class="col-md-10 d-grid">
+                    <button class="btn btn-primary">Contact</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+                                                <!-- CONTACT -->
+                                 <!--   ******************************  -->
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <img class="logo" src="#" alt="">
+                    </div>
+                    <div class="col-lg-2">
+                        <h5 class="text-white">Brand</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5 class="text-white">More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">Privacy & Policy</a></li>
+                            <li><a href="#">Warranty</a></li>
+                            <li><a href="#">Shipment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="text-white">Contact</h5>
+                        <ul class="list-unstyled">
+                            <li>joaodcarvalho@live.com.pt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2022 copyright all right reserved | Designed by João Carvalho <i
+                            class="bx bx-heart text-danger"></i> by<a
+                                class="text-white">JCarvalho</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
