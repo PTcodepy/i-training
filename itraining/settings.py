@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.conf.global_settings import EMAIL_HOST_PASSWORD
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -125,7 +127,18 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'joaodcarvalho2017@gmail.com'
+EMAIL_HOST_PASSWORD = 'mkqzsnstjiovlkge'
+EMAIL_USE_TLS = True
+# EMAIL_USER_SSL = False
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

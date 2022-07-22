@@ -6,8 +6,4 @@ app_name = 'base'
 urlpatterns = [
     path('', views.home, name="home"),
     path('formandos/', views.formandos, name="formandos"),
-
-
-
-
 ]
