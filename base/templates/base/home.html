@@ -219,7 +219,7 @@
                     <center><p>Obrigado pelo seu email, respondemos em 24h!</p></center>
                     {% else %}
                     <div class="text">Mensagem {{ message_name }}</div>
-                    <form method="post" action="{% url 'base:home' %}">
+                    <form method="post" action="{% url 'base:home' %}#contacto">
                         {% csrf_token %}
                         <div class="fields">
                             <div class="field name">

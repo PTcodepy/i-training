@@ -11,7 +11,7 @@ class Curso(models.Model):
 
 
 class Modelo(models.Model):
-    formacao = models.CharField(max_length=60)
+    formador = models.CharField(max_length=60)
     horario = models.CharField(max_length=60)
     duracao = models.IntegerField()
     localidade = models.CharField(max_length=60)
@@ -20,7 +20,7 @@ class Modelo(models.Model):
     curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
 
     def __str__(self) -> str:
-        return self.formacao
+        return self.formador
 
 
 class Formando(models.Model):

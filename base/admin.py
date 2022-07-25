@@ -9,7 +9,7 @@ class CursoAdmin(admin.ModelAdmin):
 
 @admin.register(Modelo)
 class ModeloAdmin(admin.ModelAdmin):
-    list_display = ('formacao', 'horario', 'duracao', 'localidade', 'localizacao', 'accao', 'curso')
+    list_display = ('formador', 'horario', 'duracao', 'localidade', 'localizacao', 'accao', 'curso')
     list_filter = ('curso',)
     list_editable = ('horario', 'duracao',)
 

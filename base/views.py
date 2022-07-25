@@ -26,7 +26,7 @@ def home(request):
             fail_silently=False,
         )
 
-        return render(request, 'base/home.html', {'message_name':message_name})
+        return render(request, 'base/home.html/', {'message_name':message_name})
 
     else:
         return render(request, 'base/home.html', {})
