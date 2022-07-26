@@ -507,7 +507,7 @@ section .title::after{
 .right form .button-area button{
   color: #fff;
   display: block;
-  width: 160px!important;
+  width: 180px!important;
   height: 45px;
   outline: none;
   font-size: 18px;
@@ -792,4 +792,10 @@ span:nth-child(25) {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+#formulario {
+    width: 400px;
+    margin: 0 auto;
+
 }

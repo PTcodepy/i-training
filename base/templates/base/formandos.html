@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I<>training</title>
-     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/formandos.css' %}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap css*****-->
@@ -20,27 +20,55 @@
     <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type = "image/x-icon">
 </head>
 
-<body data-spy="scroll" data-target="navbarResponsive">
+<body>
 
-<nav class="navbar">
+
+<div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+</div>
+    <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">I<><span>Training</span></a></div>
             <ul class="menu">
-                <li><a href="#" class="menu-btn">Home</a></li>
-                <li><a href="#" class="menu-btn">Sobre</a></li>
-                <li><a href="#" class="menu-btn">Serviços</a></li>
-                <li><a href="#" class="menu-btn">Cursos</a></li>
-                <li><a href="#" class="menu-btn">Equipa</a></li>
-                <li><a href="#" class="menu-btn">Contacto</a></li>
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#sobre" class="menu-btn">Sobre</a></li>
+                <li><a href="#servicos" class="menu-btn">Serviços</a></li>
+                <li><a href="#cursos" class="menu-btn">Cursos</a></li>
+                <li><a href="#equipa" class="menu-btn">Equipa</a></li>
+                <li><a href="#contacto" class="menu-btn">Contacto</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
+ <section class="contact" id="contacto">
+        <div class="max-width">
+             {% if submitted %}
+                <center><h1 class="title">Formulario Submetido com exito!</h1></center>
+                {% else %}
+            <h2 class="title">Inscrição</h2>
+            <div class="contact-content">
 
 
 
+                <div class="column right" id="formulario">
+                    <div class="text"><center>Formulario {{ message_name }}</center></div>
+                    <form method="post" action="#">
+                        {% csrf_token %}
+                         {{ form.as_p }}
+                        <div class="button-area">
+                            <button type="submit" value="Submite">Submite</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+     {% endif %}
+
+    </section>
+
+<!--
 
     <div class="#" id="#">
         <center>
@@ -58,6 +86,75 @@
             {% endif %}
         </center>
     </div>
-                                                    <!-- Top Page -->
+                                                    Top Page -->
 </body>
+<script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        // sticky navbar on scroll script
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+
+        // scroll-up button show/hide script
+        if(this.scrollY > 500){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    });
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+        // removing smooth scroll on slide-up button click
+        $('html').css("scrollBehavior", "auto");
+    });
+    $('.navbar .menu li a').click(function(){
+        // applying again smooth scroll on menu items click
+        $('html').css("scrollBehavior", "smooth");
+    });
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+    // typing text animation script
+    var typed = new Typed(".typing", {
+        strings: [" Programação", " Analista de dados", " Designer", " Consultor IT", " Administrador"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+    var typed = new Typed(".typing-2", {
+        strings: ["Programação", "Analista de dados", "Designer", "Consultor IT", "Administrador"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+    // owl carousel script
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
+});
+</script>
 </html>

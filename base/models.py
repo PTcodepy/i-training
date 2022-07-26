@@ -5,22 +5,23 @@ from django.urls import reverse
 
 class Curso(models.Model):
     nome = models.CharField(max_length=40)
-
-    def __str__(self) -> str:
-        return self.nome
-
-
-class Modelo(models.Model):
-    formador = models.CharField(max_length=60)
     horario = models.CharField(max_length=60)
     duracao = models.IntegerField()
     localidade = models.CharField(max_length=60)
     localizacao = models.CharField(max_length=60)
     accao = models.CharField(max_length=20)
-    curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
+
 
     def __str__(self) -> str:
-        return self.formador
+        return self.nome
+
+class Formador(models.Model):
+    nome = models.CharField(max_length=40)
+    curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
+
+
+    def __str__(self) -> str:
+        return self.nome
 
 
 class Formando(models.Model):
@@ -38,7 +39,8 @@ class Formando(models.Model):
     nacionalidade = models.CharField(max_length=20)
     nif = models.CharField(max_length=20)
     observacoes = models.TextField()
-    modelo = models.ForeignKey(Modelo, on_delete=models.DO_NOTHING)
+    curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
+    formador = models.ForeignKey(Formador, on_delete=models.DO_NOTHING)
 
     def __str__(self) -> str:
         return self.nome

@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Curso, Modelo, Formando
+from .models import Curso, Formador, Formando
 
 
 # Create forms

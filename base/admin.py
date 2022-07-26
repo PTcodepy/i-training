@@ -1,18 +1,28 @@
 from django.contrib import admin
-from .models import Modelo, Curso, Formando
+from .models import Formador, Curso, Formando
 
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('nome', 'duracao', 'horario', 'localidade', 'localizacao', 'accao',)
+    list_editable = ('duracao', 'horario', 'localidade', 'localizacao',)
 
 
-@admin.register(Modelo)
+
+@admin.register(Formador)
 class ModeloAdmin(admin.ModelAdmin):
-    list_display = ('formador', 'horario', 'duracao', 'localidade', 'localizacao', 'accao', 'curso')
+    list_display = ('nome', 'curso',)
     list_filter = ('curso',)
-    list_editable = ('horario', 'duracao',)
+    list_editable = ('curso',)
 
 @admin.register(Formando)
 class FormandoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('nome', 'habilitacoes', 'email', 'contacto', 'localidade', 'data_nascimento', 'nacionalidade',
+                    'curso', 'formador',)
+    list_filter = ('curso',)
+    list_editable = ('curso', 'formador',)
+
+
+
+
+
